@@ -1,19 +1,9 @@
+import 'dotenv/config'
 import express from 'express';
 
 const app = express();
 
-const port = 8080;
-
-// app.get("/", (req,res) =>{
-//     res.send("Hello from server!!")
-// })
-// app.get("/ice-tea", (req,res) =>{
-//     res.send("Ice-tea found")
-// })
-// app.get("/name", (req,res) =>{
-//     res.send("Name found but not visible")
-// })
-
+const port = process.env.PORT || 3000;
 app.use(express.json());
 
 let dataAll = [];
