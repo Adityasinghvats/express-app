@@ -1,15 +1,35 @@
 import 'dotenv/config'
 import express from 'express';
+import logger  from './logger.js';
+import morgan from 'morgan';
 
 const app = express();
-
 const port = process.env.PORT || 4000;
 app.use(express.json());
+
+const morganFormat = ':method :url :status :response-time ms';
+app.use(
+    morgan(morganFormat, {
+      stream: {
+        write: (message) => {
+            // console.log(message); -> POST /add-data 201 3.125 ms
+          const logObject = {
+            method: message.split(" ")[0],
+            url: message.split(" ")[1],
+            status: message.split(" ")[2],
+            responseTime: message.split(" ")[3],
+          };
+          logger.info(JSON.stringify(logObject));
+        },
+      },
+    })
+  );
 
 let dataAll = [];
 let nextId = 1;
 
 app.post('/add-data',(req,res) => {
+    logger.info('A post request was made');
     // destructing the json response
     const {name, price} = req.body;
     const newData = {id:nextId++, name, price};
@@ -51,6 +71,7 @@ app.delete('/delete/:id',(req, res)=>{
     }
     dataAll.splice(index, 1);
     res.status(202).send("Successfuly deleted");
+    logger.warn('A data was deleted');
 })
 
 app.listen(port, () =>{

@@ -1,0 +1,10 @@
+{"level":"\u001b[32minfo\u001b[39m","message":"A post request was made","timestamp":"2024-10-18T07:26:00.323Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/add-data\",\"status\":\"201\",\"responseTime\":\"4.362\"}","timestamp":"2024-10-18T07:26:00.329Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"A post request was made","timestamp":"2024-10-18T07:26:01.733Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/add-data\",\"status\":\"201\",\"responseTime\":\"1.552\"}","timestamp":"2024-10-18T07:26:01.736Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"A post request was made","timestamp":"2024-10-18T07:26:02.698Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/add-data\",\"status\":\"201\",\"responseTime\":\"3.125\"}","timestamp":"2024-10-18T07:26:02.702Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"A post request was made","timestamp":"2024-10-18T07:27:57.185Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/add-data\",\"status\":\"201\",\"responseTime\":\"4.977\"}","timestamp":"2024-10-18T07:27:57.192Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"A post request was made","timestamp":"2024-10-18T07:27:58.225Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/add-data\",\"status\":\"201\",\"responseTime\":\"1.421\"}","timestamp":"2024-10-18T07:27:58.226Z"}
