@@ -1,0 +1,31 @@
+name: Build Docker Image
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Build Docker image
+              run : |
+                docker build -t my-express-app:latest .
+
+            - name: Login to docker hub
+              uses: docker/login-action@v1
+              with: 
+                username: ${{}}
+                password: ${{}}
+
+            - name: Push docker image
+              uses: docker/build-push-action@v2
+              with:
+                context: .
+                push: true
+                tags: my-express-app:latest
