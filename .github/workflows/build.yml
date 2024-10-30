@@ -26,6 +26,12 @@ jobs:
                 username: ${{ secrets.DOCKERHUB_USERNAME }}
                 password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
+            - name: Create .env file
+              env:
+                PORT: ${{ secrets.PORT }}
+              run: |
+                echo "PORT=${{secrets.PORT}}" >> .env
+
             - name: Push docker image
               uses: docker/build-push-action@v6
               with:
